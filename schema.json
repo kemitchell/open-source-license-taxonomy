@@ -20,7 +20,12 @@
             "type": "object",
             "properties": {
               "type": {
-                "const": "title"
+                "enum": [
+                  "title",
+                  "version",
+                  "copyright notice",
+                  "license copyright"
+                ]
               },
               "text": {
                 "type": "string",
@@ -34,43 +39,10 @@
             "additionalProperties": false
           },
           {
-            "type": "object",
-            "properties": {
-              "type": {
-                "const": "copyright notice"
-              },
-              "text": {
-                "type": "string",
-                "minLength": 1
-              }
-            },
-            "required": [
-              "type",
-              "text"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/paragraph"
           },
           {
-            "type": "object",
-            "properties": {
-              "type": {
-                "const": "paragraph"
-              },
-              "content": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/definitions/content"
-                }
-              },
-              "tags": {
-                "$ref": "#/definitions/tags"
-              }
-            },
-            "required": [
-              "type",
-              "content"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/section"
           }
         ]
       }
@@ -79,8 +51,7 @@
   "required": [
     "spdx",
     "title",
-    "content",
-    "tags"
+    "content"
   ],
   "additionalProperties": false,
   "definitions": {
@@ -105,7 +76,7 @@
         "minLength": 1
       }
     },
-    "content": {
+    "sentences": {
       "anyOf": [
         {
           "type": "object",
@@ -128,12 +99,69 @@
           },
           "required": [
             "type",
-            "text",
-            "tags"
+            "text"
           ],
           "additionalProperties": false
         }
       ]
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "section"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "number": {
+          "type": "integer",
+          "min": 0
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/section"
+              },
+              {
+                "$ref": "#/definitions/paragraph"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        }
+      },
+      "required": [
+        "type",
+        "content"
+      ],
+      "additionalProperties": false
+    },
+    "paragraph": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "paragraph"
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/sentences"
+          }
+        },
+        "tags": {
+          "$ref": "#/definitions/tags"
+        }
+      },
+      "required": [
+        "type",
+        "content"
+      ],
+      "additionalProperties": false
     }
   }
 }
