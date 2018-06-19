@@ -1,0 +1,86 @@
+{
+  "spdx": "MIT",
+  "title": "MIT License",
+  "tags": [
+    "permissive",
+    "academic-style",
+    "historic"
+  ],
+  "content": [
+    {
+      "type": "title",
+      "text": "MIT License"
+    },
+    {
+      "type": "copyright notice",
+      "text": "Copyright (c) <year> <copyright holders>"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "sentence",
+          "text": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:",
+          "tags": [
+            "permission",
+            "nonspecific permission",
+            "documentation permission",
+            "permission to sublicense"
+          ],
+          "definitions": [
+            "Software"
+          ],
+          "terms": [
+            "copy",
+            "distribute",
+            "merge",
+            "modify",
+            "publish",
+            "sell",
+            "sublicense",
+            "use"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "sentence",
+          "text": "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+          "tags": [
+            "condition",
+            "attribution condition",
+            "copyright notice condition",
+            "license terms notice condition"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "tags": [
+        "disclaimer"
+      ],
+      "content": [
+        {
+          "type": "sentence",
+          "text": "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.",
+          "tags": [
+            "all caps",
+            "warranty disclaimer"
+          ]
+        },
+        {
+          "type": "sentence",
+          "text": "IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+          "tags": [
+            "all caps",
+            "damages exclusion"
+          ]
+        }
+      ]
+    }
+  ]
+}
