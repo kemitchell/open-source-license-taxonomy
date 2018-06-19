@@ -1,0 +1,139 @@
+{
+  "type": "object",
+  "properties": {
+    "spdx": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "$ref": "#/definitions/tags"
+    },
+    "content": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "title"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "type",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "copyright notice"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "type",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "paragraph"
+              },
+              "content": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/content"
+                }
+              },
+              "tags": {
+                "$ref": "#/definitions/tags"
+              }
+            },
+            "required": [
+              "type",
+              "content"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "spdx",
+    "title",
+    "content",
+    "tags"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "definitions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "terms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "content": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "sentence"
+            },
+            "text": {
+              "type": "string"
+            },
+            "definitions": {
+              "$ref": "#/definitions/definitions"
+            },
+            "tags": {
+              "$ref": "#/definitions/tags"
+            },
+            "terms": {
+              "$ref": "#/definitions/tags"
+            }
+          },
+          "required": [
+            "type",
+            "text",
+            "tags"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

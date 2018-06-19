@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "devDependencies": {
+    "ajv": "^6.5.1",
+    "ajv-cli": "^3.0.0"
+  },
+  "scripts": {
+    "test": "for license in licenses/*.json ; do ajv validate -s schema.json -d $license ; done"
+  }
+}
