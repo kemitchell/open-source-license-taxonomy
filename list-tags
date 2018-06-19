@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+var fs = require('fs')
+var path = require('path')
+
+var tags = []
+
+fs.readdirSync('licenses').forEach(function (file) {
+  var data = require('./licenses/' + file)
+  recurse(data)
+})
+
+tags.sort().forEach(function (tag) {
+  console.log(tag)
+})
+
+function recurse (data) {
+  if (Array.isArray(data.tags)) {
+    data.tags.forEach(function (tag) {
+      if (!tags.includes(tag)) tags.push(tag)
+    })
+  }
+  if (Array.isArray(data.content)) {
+    data.content.forEach(function (element) {
+      recurse(element)
+    })
+  }
+}
