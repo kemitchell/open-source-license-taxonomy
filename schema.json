@@ -153,6 +153,9 @@
             "$ref": "#/definitions/sentences"
           }
         },
+        "definitions": {
+          "$ref": "#/definitions/definitions"
+        },
         "tags": {
           "$ref": "#/definitions/tags"
         }
