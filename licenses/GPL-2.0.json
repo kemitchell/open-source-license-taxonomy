@@ -347,7 +347,7 @@
                 {
                   "type": "sentence",
                   "text": "In addition, mere aggregation of another work not based on the Program with the Program (or with a work based on the Program) on a volume of a storage or distribution medium does not bring the other work under the scope of this License.",
-                  "terms": [
+                  "concepts": [
                     "aggregation"
                   ]
                 }
@@ -379,7 +379,7 @@
                 {
                   "type": "sentence",
                   "text": "a) Accompany it with the complete corresponding machine-readable source code, which must be distributed under the terms of Sections 1 and 2 above on a medium customarily used for software interchange; or,",
-                  "terms": [
+                  "concepts": [
                     "corresponding source"
                   ],
                   "tags": [
@@ -435,7 +435,7 @@
                 {
                   "type": "sentence",
                   "text": "The source code for a work means the preferred form of the work for making modifications to it.",
-                  "terms": [
+                  "concepts": [
                     "preferred form"
                   ],
                   "definitions": [
