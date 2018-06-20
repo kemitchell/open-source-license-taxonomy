@@ -438,14 +438,14 @@
                   "terms": [
                     "preferred form"
                   ],
-                  "definition": [
+                  "definitions": [
                     "source code"
                   ]
                 },
                 {
                   "type": "sentence",
                   "text": "For an executable work, complete source code means all the source code for all modules it contains, plus any associated interface definition files, plus the scripts used to control compilation and installation of the executable.",
-                  "definition": [
+                  "definitions": [
                     "complete source code"
                   ]
                 },
@@ -467,7 +467,7 @@
                   "tags": [
                     "distribution by offer"
                   ],
-                  "definition": [
+                  "definitions": [
                     "distribution"
                   ]
                 }
